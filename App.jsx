@@ -1,26 +1,42 @@
-import logo from "./logo.svg";
 import "./App.css";
-import StyledButton from "./components/styledButton/StyledButton";
-import StyledHeader from "./components/styledHeader/StyledHeader";
-import { useEffect, useState } from "react";
+import Form from "./components/formValidation/Form";
+//import logo from "./logo.svg";
+// import StyledButton from "./components/styledButton/StyledButton";
+// import StyledHeader from "./components/styledHeader/StyledHeader";
+//import StyledInput from "./components/styledInput/StyledInput";
 
-function App() {
-  const [innerText, setInnerText] = useState("");
-  const [clicked, setClicked] = useState(false);
+const App = () => {
+  // const [innerText, setInnerText] = useState("");
+  // const [clicked, setClicked] = useState(false);
+  // const [inputValue, setInputValue] = useState("");
+  // const [name, setName] = useState("");
 
-  useEffect(() => {
-    clicked ? setInnerText("Clicked") : setInnerText("Click me");
-  }, [clicked]);
+  //clicked i innerText su kao varijable, dok su setInnerText i setClicked funkcije koje menjaju varijable
 
-  function buttonClick() {
-    setClicked(!clicked);
-  }
+  // useEffect(() => {
+  //   clicked ? setInnerText("Clicked") : setInnerText("Click me");
+  // }, [clicked]);
+
+  // function buttonClick() {
+  //   setClicked(!clicked);
+  // }
+  // function onChangeFunction(event) {
+  //   setInputValue(event.target.value);
+  //   console.log(event.target.value);
+  // }
+  // function inputChangeFunction(event) {
+  //   setName(event.target.value);
+  //   console.log(name.value);
+  // }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <StyledHeader innerHTML="First React app!" />
         <StyledButton innerText={innerText} onClickHandler={buttonClick} />
+        <StyledInput onChangeHandler={onChangeFunction} value={inputValue} />
+        <Form inputChange={inputChangeFunction} value={name} />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -28,10 +44,11 @@ function App() {
           rel="noopener noreferrer"
         >
           HEEEEEEEEEJ
-        </a>
+        </a> */}
+        <Form />
       </header>
     </div>
   );
-}
+};
 
 export default App;
