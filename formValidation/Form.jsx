@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import StyledButton from "./components/styledButton/StyledButton.jsx";
-import StyledInput from "./components/styledInput/StyledInput.jsx";
+import StyledButton from "../styledButton/StyledButton";
+import StyledInput from "../styledInput/StyledInput";
+import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
 
@@ -13,11 +14,16 @@ const Form = () => {
     setLastName(e.target.value);
   }
 
+  //console.log(StyledInput.value);
+
   return (
-    <div>
+    <div className="inputs">
       <StyledInput onChangeHandler={nameHandler} value={name} />
       <StyledInput onChangeHandler={lastNameHandler} value={lastName} />
-      <StyledButton innerText="Send" />
+      <StyledButton
+        onClickHandler={() => props.sendData(name, lastName)}
+        innerText="Send"
+      />
     </div>
   );
 };

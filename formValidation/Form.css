@@ -1,13 +1,10 @@
-input {
-  margin: 5px;
+
+.inputs{
   display: flex;
   flex-direction: column;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#input{
+  margin: 10px 10px 7px 10px;
 }
 #btn {
   cursor: pointer;
@@ -15,7 +12,6 @@ form {
   text-align: center;
   border: none;
   border-radius: 10px;
-  padding: 10px;
   width: 80px;
   font-size: large;
 }
