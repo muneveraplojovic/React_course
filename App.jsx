@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
-import Form from "./components/formValidation/Form";
-import CustomDiv from "./components/customDiv/CustomDiv";
+//import Form from "./components/formValidation/Form";
+//import CustomDiv from "./components/customDiv/CustomDiv";
 //import ToDo from "./components/to do list/ToDo";
-
+import ToDo from "./components/toDo/ToDo";
 const App = () => {
   //const [todos, setTodos] = useState("To do 1");
-  const [fullName, setFullName] = useState("");
+  // const [fullName, setFullName] = useState("");
+  const [todo, setTodo] = useState("");
 
-  function dataGrabber(name, lName) {
-    let fullName = name + " " + lName;
-    console.log(fullName);
-    setFullName(fullName);
+  function dataGrabber(todo) {
+    console.log(todo);
+    setTodo(todo);
   }
   return (
     <div className="App">
       <header className="App-header">
-        <CustomDiv>
+        {/* <CustomDiv>
           <h4>{fullName}</h4>
-        </CustomDiv>
-        <Form sendData={(name, lastName) => dataGrabber(name, lastName)} />
+        </CustomDiv> */}
+        {/* <Form sendData={(todo) => dataGrabber(todo)} /> */}
+        <ToDo />
       </header>
     </div>
   );
