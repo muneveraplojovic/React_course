@@ -3,9 +3,7 @@ import "./styledButton.css";
 
 const StyledButton = (props) => {
   return (
-    <button className='styledButton' onClick={props.onClickHandler}>
-      {props.innerText}
-    </button>
+    <button className='styledButton' type="button" class="btn btn-primary" onClick={props.onClickHandler}> Add To</button>
   );
 };
 
