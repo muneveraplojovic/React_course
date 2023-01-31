@@ -1,31 +1,13 @@
-import React from "react";
-import "./App.css";
-//import Form from "./components/formValidation/Form";
-//import CustomDiv from "./components/customDiv/CustomDiv";
-//import ToDo from "./components/to do list/ToDo";
-import ToDo from "./components/toDo/ToDo";
-import CustomDiv from "./components/customDiv/CustomDiv";
-const App = () => {
-  //const [todos, setTodos] = useState("To do 1");
-  // const [fullName, setFullName] = useState("");
-  // const [todo, setTodo] = useState("");
+import React from 'react';
+//import "./App.css";
+import MovieApp from './components/movie app/MovieApp';
 
-  // function dataGrabber(todo) {
-  //   console.log(todo);
-  //   setTodo(todo);
-  // }
+function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <CustomDiv>
-          <h4>{fullName}</h4>
-        </CustomDiv> */}
-        {/* <Form sendData={(todo) => dataGrabber(todo)} /> */}
-        <ToDo />
-        <CustomDiv><p>haha</p></CustomDiv>
-      </header>
+      <MovieApp/>
     </div>
   );
-};
+}
 
 export default App;
