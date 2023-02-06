@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import Gridmui from "./components/Grid/Gridmui";
+import PrimaryButton from "./components/primary/PrimaryButton";
+import StyledButton from "./components/styledButton/StyledButton";
 
 //import Form from "./components/formValidation/Form";
 //import CustomDiv from "./components/customDiv/CustomDiv";
@@ -24,10 +26,12 @@ const App = () => {
         </CustomDiv> */}
         {/* <Form sendData={(todo) => dataGrabber(todo)} /> */}
         {/* <ToDo />
-        <CustomDiv><p>HAHA</p></CustomDiv> */}
-        <>
           <Gridmui />
-        </>
+        <CustomDiv><p>HAHA</p></CustomDiv> */}
+                <PrimaryButton>Primary button</PrimaryButton>
+                <StyledButton innerText="Styled" />
+                <StyledButton innerText=" Halaluja" />
+        
       </header>
     </div>
   );

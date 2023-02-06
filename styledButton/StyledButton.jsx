@@ -1,9 +1,10 @@
 import React from "react";
 import "./styledButton.css";
+import PrimaryButton from "../primary/PrimaryButton";
 
 const StyledButton = (props) => {
   return (
-    <button className='styledButton' type="button" class="btn btn-primary" onClick={props.onClickHandler}> Add To</button>
+    <PrimaryButton onClick={props.onClickHandler}>{props.innerText}</PrimaryButton>
   );
 };
 
