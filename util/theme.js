@@ -1,5 +1,11 @@
-export const accentColor = "#e88f23";
-export const secondColor = "#F0F0E9";
+export const colors = {
+  accentColor: "#e88f23",
+  secondColor: "#F0F0E9",
+  gray:"#828181",
+  lightGray:"#b3b1b1",
+  
+};
+
 export const fontWeight = {
   light: "100",
   medium: "400",
@@ -15,5 +21,3 @@ export const fontSize = {
   large: "24px",
   xLarge: "36px",
 };
-
-export const
