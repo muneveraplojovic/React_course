@@ -1,13 +1,14 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import CustomDiv from "../../components/customDiv/CustomDiv";
 import { colors, fontSize } from "../../util/theme";
+import Text from "../../components/Text/Text";
+
+import Grid from "@mui/material/Grid";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import Text from "../../Text/Text";
 import { getScreenWidth } from "../../util/helpers";
 
 const SocialIcons = () =>  (
@@ -48,7 +49,7 @@ const TopRow = () => {
       display='flex'
       width='100%'
       height='30px'
-      padding='0px 5%'
+      padding='0px 10%'
       border='0px'
     >
       <Grid container direction='row'>
