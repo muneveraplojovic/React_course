@@ -1,70 +1,80 @@
 import React from "react";
+import Grid from "@mui/material/Grid";
 import CustomDiv from "../../components/customDiv/CustomDiv";
 import { colors, fontSize } from "../../util/theme";
-import Text from "../../components/Text/Text";
-
-import Grid from "@mui/material/Grid";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import Text from "../../components/Text/Text";
 import { getScreenWidth } from "../../util/helpers";
+//import SimplifiedDiv from "../../components/SimplifiedDiv/SimplifiedDiv";
 
-const SocialIcons = () =>  (
+const SocialIcons = () => (
   <>
-              <TwitterIcon
-                style={{
-                  fontSize: fontSize.normal,
-                  color: colors.gray,
-                  margin: "0px 10px"
-                }}
-              />
-              <InstagramIcon
-                style={{
-                  fontSize: fontSize.normal,
-                  color: colors.gray,
-                  margin: "0px 10px"
-                }}
-              />
-              <FacebookIcon
-                style={{
-                  fontSize: fontSize.normal,
-                  color: colors.gray,
-                  margin: "0px 10px"
-                }}
-              />
-              </>
-  )
-
+    <TwitterIcon
+      style={{
+        fontSize: fontSize.normal,
+        color: colors.gray,
+        margin: "0px 10px",
+      }}
+    />
+    <InstagramIcon
+      style={{
+        fontSize: fontSize.normal,
+        color: colors.gray,
+        margin: "0px 10px",
+      }}
+    />
+    <FacebookIcon
+      style={{
+        fontSize: fontSize.normal,
+        color: colors.gray,
+        margin: "0px 10px",
+      }}
+    />
+  </>
+);
 
 const TopRow = () => {
   const screenWidth = getScreenWidth();
 
   console.log(screenWidth);
 
+  const alignItemsInFirstDiv = screenWidth === "SM" ? "center" : "flex-start";
+  const alignItemsInSecondDiv = screenWidth === "SM" ? "center" : "flex-end";
+  const paddingInDiv = screenWidth === "SM" ? "10px 0px" : "0px";
+  const topDivHeight = screenWidth === "SM" ? "auto" : "30px";
+  const responsivePadding =
+    screenWidth === "SM" ? "0px" : screenWidth === "MD" ? "0px" : "0px 10%";
   return (
     <CustomDiv
       bgColor={colors.secondColor}
-      display='flex'
-      width='100%'
-      height='30px'
-      padding='0px 10%'
-      border='0px'
+      display="flex"
+      width="100%"
+      height={topDivHeight}
+      padding={responsivePadding}
+      border="0px"
     >
-      <Grid container direction='row'>
-        <Grid item md={6} lg={6}>
-          <CustomDiv display='flex' alignItems='center'>
+      <Grid container direction="row">
+        <Grid item xs={12} sm={6} md={6} lg={6}>
+          <CustomDiv
+            display="flex"
+            alignItems="center"
+            justifyContent={alignItemsInFirstDiv}
+            padding={paddingInDiv}
+          >
             <PhoneIcon
               style={{
                 fontSize: fontSize.normal,
               }}
             />
-            <Text fontSize={fontSize.small}>+381669597807</Text>
+            <Text fontSize={fontSize.small}>+38163456789</Text>
             <CustomDiv
-              display='flex'
-              alignItems='center'
-              margin='0px 0px 0px 5px'
+              display="flex"
+              alignItems="center"
+              margin="0px 0px 0px 15px"
             >
               <EmailIcon
                 style={{
@@ -75,13 +85,14 @@ const TopRow = () => {
             </CustomDiv>
           </CustomDiv>
         </Grid>
-        <Grid item md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
           <CustomDiv
-            display='flex'
-            alignItems='center'
-            justifyContent='flex-end'
+            display="flex"
+            alignItems="center"
+            justifyContent={alignItemsInSecondDiv}
+            padding={paddingInDiv}
           >
-          <SocialIcons/>
+            <SocialIcons />
           </CustomDiv>
         </Grid>
       </Grid>
@@ -89,4 +100,4 @@ const TopRow = () => {
   );
 };
 
-export default TopRow;
+export default TopRow;
