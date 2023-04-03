@@ -35,7 +35,6 @@ const App = () => {
 
 export default App;
 
-// nesto treba kontkrnp das eradi samo sto ne znam statusbar
 
 // fibonacijev niz i menjanje elemenata
 // maksimalni i minimalni uporedjivanje brojeva + suma tih brojeva
